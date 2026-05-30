@@ -323,10 +323,7 @@
         <section class="memory-row">
             <div class="photo-side">
                 <div class="photo-frame" id="frame1">
-                    <img src="images/photo1.jpg" alt="Фото 1" onload="this.parentElement.classList.add('has-image')">
-                    <span class="placeholder-number">①</span>
-                    <span class="placeholder-icon">📷</span>
-                    <span class="placeholder-label">Фото 1</span>
+                    <img src="images/photo1.jpg">
                 </div>
                 <div class="photo-caption">Здесь может быть дата</div>
             </div>
@@ -341,10 +338,7 @@
         <section class="memory-row">
             <div class="photo-side">
                 <div class="photo-frame" id="frame2">
-                    <img src="images/photo2.jpg" alt="Фото 2" onload="this.parentElement.classList.add('has-image')">
-                    <span class="placeholder-number">②</span>
-                    <span class="placeholder-icon">📷</span>
-                    <span class="placeholder-label">Фото 2</span>
+                    <img src="images/photo2.jpg">
                 </div>
                 <div class="photo-caption"></div>
             </div>
@@ -359,10 +353,7 @@
         <section class="memory-row">
             <div class="photo-side">
                 <div class="photo-frame" id="frame3">
-                    <img src="images/photo3.jpg" alt="Фото 3" onload="this.parentElement.classList.add('has-image')">
-                    <span class="placeholder-number">③</span>
-                    <span class="placeholder-icon">📷</span>
-                    <span class="placeholder-label">Фото 3</span>
+                    <img src="images/photo3.jpg">
                 </div>
                 <div class="photo-caption"></div>
             </div>
@@ -377,10 +368,7 @@
         <section class="memory-row">
             <div class="photo-side">
                 <div class="photo-frame" id="frame4">
-                    <img src="images/photo8.jpg" alt="Фото 4" onload="this.parentElement.classList.add('has-image')">
-                    <span class="placeholder-number">④</span>
-                    <span class="placeholder-icon">📷</span>
-                    <span class="placeholder-label">Фото 4</span>
+                    <img src="images/photo8.jpg">
                 </div>
                 <div class="photo-caption"></div>
             </div>
@@ -397,10 +385,7 @@
         <section class="memory-row">
             <div class="photo-side">
                 <div class="photo-frame" id="frame5">
-                    <img src="images/photo7.jpg" alt="Фото 5" onload="this.parentElement.classList.add('has-image')">
-                    <span class="placeholder-number">⑤</span>
-                    <span class="placeholder-icon">📷</span>
-                    <span class="placeholder-label">Фото 5</span>
+                    <img src="images/photo7.jpg">
                 </div>
                 <div class="photo-caption"></div>
             </div>
@@ -415,10 +400,7 @@
         <section class="memory-row">
             <div class="photo-side">
                 <div class="photo-frame" id="frame6">
-                    <img src="images/photo4.jpg" alt="Фото 6" onload="this.parentElement.classList.add('has-image')">
-                    <span class="placeholder-number">⑥</span>
-                    <span class="placeholder-icon">📷</span>
-                    <span class="placeholder-label">Фото 6</span>
+                    <img src="images/photo4.jpg">
                 </div>
                 <div class="photo-caption"></div>
             </div>
@@ -433,10 +415,7 @@
         <section class="memory-row">
             <div class="photo-side">
                 <div class="photo-frame" id="frame7">
-                    <img src="images/photo9.jpg" alt="Фото 7" onload="this.parentElement.classList.add('has-image')">
-                    <span class="placeholder-number">⑦</span>
-                    <span class="placeholder-icon">📷</span>
-                    <span class="placeholder-label">Фото 7</span>
+                    <img src="images/photo9.jpg">
                 </div>
                 <div class="photo-caption"></div>
             </div>
@@ -451,10 +430,7 @@
         <section class="memory-row">
             <div class="photo-side">
                 <div class="photo-frame" id="frame8">
-                    <img src="images/photo5.jpg" alt="Фото 8" onload="this.parentElement.classList.add('has-image')">
-                    <span class="placeholder-number">⑧</span>
-                    <span class="placeholder-icon">📷</span>
-                    <span class="placeholder-label">Фото 8</span>
+                    <img src="images/photo5.jpg">
                 </div>
                 <div class="photo-caption"></div>
             </div>
@@ -464,15 +440,11 @@
                 </div>
             </div>
         </section>
-        
         <!-- ===== ФОТО 9 ===== -->
         <section class="memory-row">
             <div class="photo-side">
                 <div class="photo-frame" id="frame9">
-                    <img src="images/photo6.jpg" alt="Фото 9" onload="this.parentElement.classList.add('has-image')">
-                    <span class="placeholder-number">⑨</span>
-                    <span class="placeholder-icon">📷</span>
-                    <span class="placeholder-label">Фото 9</span>
+                    <img src="images/photo6.jpg">
                 </div>
                 <div class="photo-caption"></div>
             </div>
@@ -493,7 +465,7 @@
 
     <script>
         (function() {
-            // ===== АУДИО (громкость 3%, автозапуск) =====
+            // ===== АУДИО (громкость 20%, автозапуск) =====
             const audio = document.getElementById('bg-audio');
             audio.volume = 0.03;
             audio.play().catch(() => {
@@ -507,6 +479,7 @@
             });
 
             // ===== АВТО-ОПРЕДЕЛЕНИЕ ФОТО В РАМКАХ =====
+            // Когда фото загрузилось — скрываем плейсхолдер
             document.querySelectorAll('.photo-frame img').forEach(img => {
                 if (img.complete && img.naturalWidth > 0) {
                     img.parentElement.classList.add('has-image');
